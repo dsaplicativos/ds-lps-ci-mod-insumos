@@ -25,6 +25,7 @@ class InsumoModel extends CI_Model {
     function getIndexPageData() {
         $data['collapse_btn'] = 1;
         $data['label'] = 'Adicionar';
+        $data['setMargin'] = true;
         $data['collapse_id'] = 'newServiceInput';
         $data['title'] = 'Insumos';
         $data['content'] = $this->listServiceInputs();
