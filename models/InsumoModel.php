@@ -1,6 +1,6 @@
 <?php
 
-include_once APPPATH . 'modules/service_inputs/libraries/Insumo.php';
+include_once APPPATH . 'modules/insumos/libraries/Insumo.php';
 include_once APPPATH . 'libraries/component/Table.php';
 
 class InsumoModel extends CI_Model {
