@@ -22,11 +22,13 @@ class InsumoModel extends CI_Model {
         $this->load->library('form_validation');
     }
 
-    function getIndexPageData() {
-        $data['collapse_btn'] = 1;
-        $data['label'] = 'Adicionar';
+    function getIndexPageData($edit = false) {
+        if ($edit == false) {
+            $data['collapse_btn'] = 1;
+            $data['label'] = 'Adicionar';
+            $data['collapse_id'] = 'newServiceInput';
+        }
         $data['setMargin'] = true;
-        $data['collapse_id'] = 'newServiceInput';
         $data['title'] = 'Insumos';
         $data['content'] = $this->listServiceInputs();
         return $data;
