@@ -161,8 +161,8 @@ class InsumoModel extends CI_Model {
      * @return string
      */
     private function getActionButtons($id, $name) {
-        $html = "<a class='' href='" . base_url('/insumos/editar/' . $id) . "'><i class='fa fa-pencil fa-lg fa-fw'></i></a>";
-        $html .= "<a href='" . base_url('/insumos/deletar/' . $id) . "' class='red-text' onclick=\"return confirm('Excluir Insumo: " . $name . " ?'); return false;\"><i class='fa fa-times fa-lg fa-fw'></i></a>";
+        $html = "<a class='' href='" . base_url('/insumos/edit/' . $id) . "'><i class='fa fa-pencil fa-lg fa-fw'></i></a>";
+        $html .= "<a href='" . base_url('/insumos/delete/' . $id) . "' class='red-text' onclick=\"return confirm('Excluir Insumo: " . trim($name) . "?'); return false;\"><i class='fa fa-times fa-lg fa-fw'></i></a>";
         return $html;
     }
 
