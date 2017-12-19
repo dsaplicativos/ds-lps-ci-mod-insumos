@@ -38,6 +38,13 @@ class InsumoModel extends CI_Model {
         return $data;
     }
 
+    function getEditPageData($id) {
+        $data['showCollapse'] = 1;
+        $data['title'] = 'Editar Insumo';
+        $data['action'] = 'insumos/edit/' . $id;
+        return $data;
+    }
+
     /**
      * Recuperação de dados enviados por formulário via POST
      * @return array
