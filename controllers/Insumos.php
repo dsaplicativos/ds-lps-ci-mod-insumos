@@ -7,7 +7,7 @@ class Insumos extends MY_Controller {
         parent::__construct();
         $this->load->model('insumos/InsumoModel', 'model');
     }
-    
+
     function index() {
         $v = $this->model->getInsertPageData();
         $v['res'] = $this->model->newServiceInput();
