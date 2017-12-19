@@ -5,7 +5,7 @@
         <!--Form with header-->
         <div class="container mt-2 mb-5">
             <div class="card">
-                <div class="card-block">
+                <div class="card-block px-4 py-3">
 
 
                     <div class="mt-1 mb-2 text-center">
