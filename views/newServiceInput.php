@@ -47,7 +47,7 @@
                         </div>
 
                         <div class="mt-3 text-center">
-                            <button class="btn btn-dlgreen">Enviar</button>
+                            <button class="btn btn-primary">Enviar</button>
                         </div>
                 </div>
 
