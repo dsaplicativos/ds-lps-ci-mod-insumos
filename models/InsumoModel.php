@@ -87,7 +87,7 @@ class InsumoModel extends CI_Model {
      * @return method
      */
     function deleteServiceInput($id) {
-        return $this->insumo->deleteServiceInput();
+        return $this->insumo->deleteServiceInput($id);
     }
 
     /**
