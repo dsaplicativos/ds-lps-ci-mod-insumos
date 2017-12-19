@@ -52,6 +52,7 @@ class Insumo {
      */
     function getServiceInputs() {
         $res = $this->db->where('deleted', 0)->order_by('nome', 'ASC')->get('insumos');
+        return $res->result();
     }
 
     /**
