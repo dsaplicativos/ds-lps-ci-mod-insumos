@@ -141,10 +141,11 @@ class InsumoModel extends CI_Model {
             $labels = array('Nome', 'Marca', 'Observação', '', '');
             $i = 0;
             foreach ($list as $item) {
-                $data[$i]['nome'] = $item['nome'];
-                $data[$i]['marca'] = $item['marca'];
-                $data[$i]['observacao'] = $item['observacao'];
-                $data[$i]['btn'] = '';
+                $data[$i]['nome'] = $item->nome;
+                $data[$i]['marca'] = $item->marca;
+                $data[$i]['observacao'] = $item->observacao;
+                $data[$i]['btn'] = $this->getActionButtons($item->id, $item->nome);
+                $data[$i]['id'] = $item->id;
             }
             $data = Table::buildDataArray($data, $labels);
             $table = new Table($data);
