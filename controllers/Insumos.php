@@ -8,6 +8,10 @@ class Insumos extends MY_Controller {
         $this->load->model('insumos/InsumoModel', 'model');
     }
 
+    /**
+     * Página inicial
+     * Visualização de lista e criação de elemento
+     */
     function index() {
         $v = $this->model->getInsertPageData();
         $v['res'] = $this->model->newServiceInput();
@@ -16,6 +20,11 @@ class Insumos extends MY_Controller {
         $this->show($this->load->view('tableView', $data, true));
     }
 
+    /**
+     * Página de edição
+     * Visualização de lista e modificação do elemento
+     * @param int $id
+     */
     function edit($id) {
         $v = $this->model->getEditPageData($id);
         $v['res'] = $this->model->editServiceInput($id);
@@ -24,6 +33,10 @@ class Insumos extends MY_Controller {
         $this->show($this->load->view('tableView', $data, true));
     }
 
+    /**
+     * Link de remoção de elemento
+     * @param int $id
+     */
     function delete($id) {
         $this->model->deleteServiceInput($id);
         redirect('/insumos');
