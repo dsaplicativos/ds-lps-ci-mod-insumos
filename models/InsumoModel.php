@@ -13,6 +13,7 @@ class InsumoModel extends CI_Model {
     /**
      * InsumoModel constructor.
      * Criação de objeto Insumo
+     * Carregamento de dependências do CodeIgniter (prevenindo falhas de autoload)
      */
     public function __construct()
     {
@@ -22,6 +23,11 @@ class InsumoModel extends CI_Model {
         $this->load->library('form_validation');
     }
 
+    /**
+     * Criação de variáveis para a view de página principal (index)
+     * @param bool $edit
+     * @return array
+     */
     function getIndexPageData($edit = false) {
         if ($edit == false) {
             $data['collapse_btn'] = 1;
@@ -29,17 +35,26 @@ class InsumoModel extends CI_Model {
             $data['collapse_id'] = 'newServiceInput';
         }
         $data['setMargin'] = true;
-        $data['title'] = 'Insumos';
+        $data['title'] = 'Equipamentos e Produtos';
         $data['content'] = $this->listServiceInputs();
         return $data;
     }
 
+    /**
+     * Criação de variáveis para collapse de criação de insumo
+     * @return array
+     */
     function getInsertPageData() {
         $data['title'] = 'Novo Insumo';
         $data['action'] = 'insumos/index';
         return $data;
     }
 
+    /**
+     * Criação de variáveis para collapse de edição de insumo
+     * @param int $id
+     * @return array
+     */
     function getEditPageData($id) {
         $data['showCollapse'] = 1;
         $data['title'] = 'Editar Insumo';
