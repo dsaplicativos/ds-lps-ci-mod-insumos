@@ -45,7 +45,7 @@ class InsumoModel extends CI_Model {
      * @return array
      */
     function getInsertPageData() {
-        $data['title'] = 'Novo Insumo';
+        $data['title'] = 'Novo equipamento/produto';
         $data['action'] = 'insumos/index';
         return $data;
     }
@@ -57,7 +57,7 @@ class InsumoModel extends CI_Model {
      */
     function getEditPageData($id) {
         $data['showCollapse'] = 1;
-        $data['title'] = 'Editar Insumo';
+        $data['title'] = 'Editar equipamento/produto';
         $data['action'] = 'insumos/edit/' . $id;
         return $data;
     }
